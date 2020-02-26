@@ -1,0 +1,99 @@
+.login-div {
+    position: absolute;
+    height: 30vw;
+    width: 20vw;
+    border-radius: 2%;
+    padding: 5px;
+    background-image: linear-gradient(#065A82, #17A398);
+    margin: auto 40%;
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+.login-div form{
+    width: 100%;
+    height: 100%;
+}
+
+
+.login-div form p{
+    text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+    color: #DBE3E8;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+    font-size: 3vw;
+    margin: 10% auto;
+}
+
+.login-div form input {
+    
+    -webkit-box-shadow: inset 0px 0px 18px -6px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px 0px 18px -6px rgba(0,0,0,0.5);
+    box-shadow: inset 0px 0px 18px -6px rgba(0,0,0,0.5);
+    height: 8%;
+    width: 70%;
+    margin-left: 13%;
+    margin-right: 13%; 
+    margin-bottom: 20%;
+    background-color: #15958B;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    padding: 0 2%;
+    color: #DBE3E8;
+    font-size: 0.8vw;
+    transition: background-color 0.2s linear;
+}
+
+.login-div form input:focus {
+    background-color:#337898;
+
+}
+
+.login-div form label{
+    width: 70%;
+    margin: 30px 15%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+    color: #DBE3E8;
+    font-size: 1.3vw;
+}
+
+.login-div form button {
+    height: 3vw;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 8px 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+    color: #DBE3E8;
+    font-size: 1.3vw;
+    /* background-image: linear-gradient(#15958B, #15958B); */
+    background-color: #15958B;
+    border: none;
+    outline: none;
+    -webkit-box-shadow: 0px 0px 18px -6px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 18px -6px rgba(22, 17, 17, 0.5);
+    box-shadow: 0px 0px 18px -6px rgba(0,0,0,0.5);
+    transition: background-color 0.5s linear;
+}
+
+.login-div form button:hover {
+    background-color:#337898;
+
+}
+
+.login-div form button:focus {
+    background-color:#337898;
+
+}
