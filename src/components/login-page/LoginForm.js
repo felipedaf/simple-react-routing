@@ -1,8 +1,8 @@
 import React from 'react'
-import "../static/login-form.css"
 import axios from 'axios'
-import { apiURI } from '../uriRedirect'
-import { localTokenName } from '../auth'
+import "../../static/login-form.css"
+import { apiURI } from '../../uriRedirect'
+import { localTokenName } from '../../auth'
 
 
 export default function LoginForm(props) {
@@ -27,6 +27,13 @@ export default function LoginForm(props) {
                 alert('Something went wrong!')
         })
         .catch(err => {
+            
+            if(!err.response){
+                alert('Server is unavailable!')
+                return
+            }
+
+            
             let status = err.response.status
             if(status === 401)
                 alert('User and password incompatible')

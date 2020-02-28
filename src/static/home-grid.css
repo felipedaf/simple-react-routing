@@ -1,0 +1,65 @@
+.main-view-home{
+    width: 100%;
+    height: 100%;
+}
+
+.user-data-session{
+    position: relative;
+    margin: auto;
+    display: table;
+    width: 100%;
+    max-width: 1400px;
+    height: 95%;
+    top: 5%;
+    z-index: 10;
+}
+
+.posts-session{
+    display: table-cell;
+    width: auto;
+    height: 100%;
+    margin: auto;
+}
+
+.side-session{
+    position: relative;
+    display: table-cell;
+    width: 20%;
+    height: 100%;
+    margin: auto;
+    background-color: #F5F8FA;
+    -webkit-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.1); 
+    box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.1);
+    z-index: 5;
+}
+
+
+.search-session{
+    position: absolute;
+    width: 100%;
+    height: 5%;
+    background-color: #F5F8FA;
+    -webkit-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.1); 
+    box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.1);
+    z-index: 15;
+}
+
+.create-post-session{
+    float: left;
+    position: relative;
+    width: 100%;
+    height: 20%;
+    background-color: #F5F8FA;
+    -webkit-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.1); 
+    box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.1);
+    z-index: 4;
+}
+
+.logged-user-posts-session{
+    float: left;
+    position: relative;
+    width: 100%;
+    height: 80%;
+    background-color: white;
+    z-index: 0;
+}

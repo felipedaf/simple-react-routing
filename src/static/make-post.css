@@ -1,0 +1,85 @@
+.post-input-session, .post-input-session form{
+    width: 100%;
+    height: 100%;
+}
+
+.input-text{
+    text-align: center;
+    float: left;
+    position: relative;
+    min-height: 10%;
+    min-height: 10%;
+    height: 70%;
+    left: 12%;
+    top: 5%;
+    width: 70%;
+    padding: 20px;
+    resize: none;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-large;
+    font-weight: 400;
+    z-index: 1;
+    
+}
+
+
+.input-text::placeholder{
+    text-align: center;
+    font-size: xx-large;
+}
+
+.input-text:focus::placeholder{
+    color: transparent
+}
+
+.share-button{
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    background-color: #F5F8FA;
+    position: absolute;
+    max-width: 80px;
+    max-height: 30px;
+    width: 20%;
+    height: 40%;
+    float: left;
+    top: 70%;
+    border: none;
+    border-radius: 20px;
+    transition: all 0.3s ease 0s;
+    z-index: 2;
+}
+
+.share-button:hover{
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+
+@media (max-width:1230px) {
+    .input-text{
+        left: 30%;
+        width: 35%;
+        
+        
+    }
+
+    .share-button{
+        left: 55%;
+    }
+}
+
+@media (max-height:800px) {
+    .input-text{
+        height: 40%;        
+        
+    }
+
+    .share-button{
+        left: 75%;
+        top: 45%
+    }
+}
