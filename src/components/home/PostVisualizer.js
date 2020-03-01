@@ -7,7 +7,7 @@ export default function PostVisualizer() {
             <div className="post-space-session">
                 <div className="post">
                     <div className="post-content">
-                        <p>Frase aleatoria</p>
+                        <span>Random phrase</span>
                     </div>
                 </div>
                 <div className="post-actions">
@@ -24,10 +24,34 @@ export default function PostVisualizer() {
                 </div>
                 <div className="post-comments">
                     <div className="comments">
-
+                        <div className="comment">
+                            <div className="user-data">
+                                <div className="comment-profile-photo">
+                                    <img src="https://cdn4.iconfinder.com/data/icons/men-avatars-icons-set-2/256/4-512.png"></img>
+                                </div>
+                                <div className="comment-profile-name">
+                                    <span>profile name</span>
+                                </div>
+                            </div>
+                            <div className="comment-content">
+                                <div className="content"><span>Example ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd dasdasdassdasdasdasdassda</span></div>
+                            </div>
+                        </div>
+                        <div className="comment">
+                            <div className="user-data">
+                                <div className="comment-profile-photo">
+                                    <img src="https://cdn4.iconfinder.com/data/icons/men-avatars-icons-set-2/256/4-512.png"></img>
+                                </div>
+                                <div className="comment-profile-name">
+                                    <span>profile name</span>
+                                </div>
+                            </div>
+                            <div className="comment-content">
+                                <div className="content"><span>Que post merda mano exclui isso</span></div>
+                            </div>
+                        </div>
                     </div>
                     <div className="comment-post">
-
                     </div>
                 </div>
             </div>
