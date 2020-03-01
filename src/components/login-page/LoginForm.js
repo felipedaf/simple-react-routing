@@ -12,7 +12,7 @@ export default function LoginForm(props) {
         let password = document.getElementById('password').value
         axios({
             method: 'post',
-            url: 'http://'+apiURI+'/auth',
+            url: apiURI + '/auth',
             data: {
                 username: username,
                 password: password

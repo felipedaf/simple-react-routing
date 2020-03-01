@@ -4,7 +4,7 @@ import {isAuthenticated} from './auth'
 import Home from './components/Home'
 import LoginPage from './components/LoginPage'
 
-const apiURI = 'localhost:8080'
+const apiURI = 'http://localhost:8080'
 
 const UriRedirect = () => {
     const [auth, setAuth] = useState(null)

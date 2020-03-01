@@ -1,13 +1,15 @@
 import axios from "axios"
 import { apiURI } from "./uriRedirect"
 
+
+const localTokenName = 'api_user_tk'
+
+let token = localStorage.getItem(localTokenName) === null ? '' : localStorage.getItem(localTokenName)
+
 const isAuthenticated = async () => {
-
-    let token = localStorage.getItem(localTokenName) === null ? '' : localStorage.getItem(localTokenName)
-
     return await axios({
         method: 'get',
-        url: 'http://'+apiURI+'/',
+        url: apiURI+'/',
         headers: {
             'Authorization': 'JWT ' + token
         }
@@ -26,6 +28,6 @@ const isAuthenticated = async () => {
 
 }
 
-const localTokenName = 'api_user_tk'
 
-export {isAuthenticated, localTokenName}
+
+export {isAuthenticated, localTokenName, token}
