@@ -17,7 +17,6 @@ const Routes = () => (
             <PrivateRoute path='/about' component={() => <About/>}/>
             <PrivateRoute path='/contact' component={() => <Contact/>}/>
             <PrivateRoute path='/home' component={() => <Home/>}/>
-            <Route path='*' component={() => <h1>404 not found!</h1>}/>
     </HashRouter>
 
 )

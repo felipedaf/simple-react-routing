@@ -20,7 +20,6 @@ const isAuthenticated = async () => {
     .catch(err => {
 
         if(!err.response){
-            alert('Server is unavailable!')
         }
 
         return false
