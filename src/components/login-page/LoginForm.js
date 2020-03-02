@@ -45,7 +45,7 @@ export default function LoginForm(props) {
         event.preventDefault()
     }
 
-    function usernameIconClassChange(element, home) {
+    function usernameIconClassChange(element) {
         let svgIcon = element.target.parentNode.parentNode.children[0].children[0]
         if(svgIcon.id === 'username-icon')
             (usernameIconClass === 'green-shadow') ? setUsernameIconClass('login-svg-icons') : setUsernameIconClass('green-shadow')
@@ -58,7 +58,7 @@ export default function LoginForm(props) {
     return (
         <div className="login-div">
             <form onSubmit={loginRequest}>
-                <span>login</span>
+                <span className="login-title">welcome</span>
                 <div className="data-field">
                     <div>
                         <svg id="username-icon" className={usernameIconClass} height="540px" width="540px" viewBox="0 0 350 350">
@@ -91,13 +91,13 @@ export default function LoginForm(props) {
                         </svg>
                     </div>
                     <div>
-                     <input onFocus={usernameIconClassChange} onBlur={usernameIconClassChange} placeholder="Password" type="password" id="password" name="password"></input>
+                        <input onFocus={usernameIconClassChange} onBlur={usernameIconClassChange} placeholder="Password" type="password" id="password" name="password"></input>
                     </div>
                     
                 </div>
                 <button onClick={loginRequest}>LOGIN</button>
-                <div>
-                    
+                <div className="signup-message-div">
+                    <span>Not a member? <a href="register">Sign up now</a></span>
                 </div>
             </form>
         </div>

@@ -21,7 +21,7 @@
     grid-template-rows: 8fr 4fr 1fr 4fr 8fr 12fr;
 }
 
-.login-div form span{
+.login-title{
     color: #a3f7bf;
     line-height: 1.2;
     text-transform: uppercase;
@@ -112,4 +112,33 @@
     box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
     color: #fff;
     transform: translateY(-4px);
+}
+
+.signup-message-div{
+    font-family: 'Source Sans Pro' ;
+    font-weight: lighter;
+    font-size: 55%;
+    text-align: center;
+    display: grid;
+    align-self: end;
+    justify-self: center;
+}
+
+.signup-message-div span{
+    position: relative;
+    color: white;
+    font-size: 160%;
+    align-self: center;
+    justify-self: center;
+}
+
+.signup-message-div span a{
+    color: #a3f7bf;
+    outline: none;
+}
+
+.signup-message-div span a:focus{
+    color: #2EE59D;
+    transform: translateY(-4px);
+    font-size: 18px;
 }

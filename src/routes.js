@@ -13,12 +13,12 @@ const Routes = () => (
 
     <BrowserRouter>
         <Switch>
-            <Route exact path='/' component={() => <UriRedirect/>} />
+            <Route path='/' component={() => <UriRedirect/>} />
             <PrivateRoute path='/app' component={() => <h1>Voce esta logado!</h1>}/>
             <PrivateRoute path='/about' component={() => <About/>}/>
             <PrivateRoute path='/contact' component={() => <Contact/>}/>
             <PrivateRoute path='/home' component={() => <Home/>}/>
-            <Route path='*' component={() => <h1>404 not found!</h1>}/>
+            {/* <Route path='*' component={() => <h1>404 not found!</h1>}/> */}
         </Switch>
     </BrowserRouter>
 
