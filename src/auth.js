@@ -18,10 +18,6 @@ const isAuthenticated = async () => {
         return true
     })
     .catch(err => {
-
-        if(!err.response){
-        }
-
         return false
     })
 

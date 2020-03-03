@@ -3,10 +3,11 @@ import { Route, Redirect} from 'react-router-dom'
 import {isAuthenticated} from './auth'
 import Home from './components/Home'
 import LoginPage from './components/LoginPage'
+import RegisterPage from './components/RegisterPage'
 
 const apiURI = 'http://localhost:8080'
 
-const UriRedirect = () => {
+const UriRedirect = ({component: Component, ...rest}) => {
     const [auth, setAuth] = useState(null)
 
     useEffect(() => {
@@ -18,11 +19,21 @@ const UriRedirect = () => {
     }, [])
 
     if (auth === null){
-        return <div></div>
+        return <LoginPage/>
     }
 
+    console.log(rest.path)
+
     return (
-        auth ? <Home/> : <LoginPage/>
+
+        <Route {...rest} render={props => {
+
+            return auth ? <Component {...props} /> : (rest.path === '/register' ? <RegisterPage {...props}/> : <LoginPage {...props}/>)
+        }
+            
+        }/>
+        
+         
     )
 }
 
@@ -46,12 +57,17 @@ const PrivateRoute = ({component: Component, ...rest}) => {
 
     return (
 
-        <Route {...rest} render={props =>
-            auth ? (
+        <Route {...rest} render={props => {
+
+            console.log(props.location)
+
+            return auth ? (
                 <Component {...props}/>
             ) : (
                 <Redirect to={{pathname : '/', state: {from: props.location}}}/>
             )
+        }
+            
         }/>
 
     )

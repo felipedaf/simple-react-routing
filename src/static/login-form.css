@@ -12,7 +12,7 @@
     justify-self: center;
     height: 50vh;
     width: 30vh;
-    padding: 1vh 4vh;
+    padding: 0.5vh 2vh;
     max-height: 500px;
     min-height: 300px;
     max-width: 300px;
@@ -76,12 +76,11 @@
     align-self: center;
     justify-self: center;
     width: 30%;
-    height: auto;
-    transition: all 0.2s ease 0s;   
+    height: auto; 
     fill: #2EE59D;
-    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
     color: #fff;
-    transform: translateY(-4px);
+    animation: lightloop 3s;
+    animation-iteration-count: infinite;
 }
 
 .login-div form button{
@@ -102,16 +101,16 @@
 
 .login-div form button:hover{
     background-color: #2EE59D;
-    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    animation: lightloop 3s;
+    animation-iteration-count: infinite;
     color: #fff;
-    transform: translateY(-4px);
 }
 
 .login-div form button:focus{
     background-color: #2EE59D;
-    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
     color: #fff;
-    transform: translateY(-4px);
+    animation: lightloop 3s;
+    animation-iteration-count: infinite;
 }
 
 .signup-message-div{
@@ -132,13 +131,47 @@
     justify-self: center;
 }
 
-.signup-message-div span a{
+.register{
     color: #a3f7bf;
     outline: none;
+    transition-duration: 0.3s;
 }
 
-.signup-message-div span a:focus{
+.register:focus{
     color: #2EE59D;
     transform: translateY(-4px);
-    font-size: 18px;
+    font-size: 150%;
+    transition-duration: 0.3s;
+}
+
+
+.register:hover{
+    color: #2EE59D;
+    transform: translateY(-4px);
+    font-size: 150%;
+    transition-duration: 0.3s;
+}
+
+
+@keyframes lightloop {
+    0% {
+        box-shadow: none;
+        transform: translateY(0px);
+    }
+    25% {
+        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        transform: translateY(-4px);
+    }
+    50% {
+        box-shadow: none;
+        transform: translateY(0px);
+    }
+    75% {
+        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        transform: translateY(-4px);
+    }
+    100% {
+        box-shadow: none;
+        transform: translateY(0px);
+    }
 }

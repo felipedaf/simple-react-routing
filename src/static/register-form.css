@@ -1,0 +1,196 @@
+.register-div{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    background-image: linear-gradient(190deg, #a3f7bf, #29a19c);
+}
+
+.register-div form{
+    background: #393e46;
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    height: 60vh;
+    width: 40vh;
+    padding: 0.5vh 4vh;
+    max-height: 600px;
+    min-height: 300px;
+    max-width: 400px;
+    min-width: 300px;
+    border-radius: 5px;
+    grid-template-rows: 4fr 8fr 3fr 2fr;
+}
+
+.form-title-session{
+    display: grid;
+}
+
+.form-title-session span{
+    font-weight: bolder;
+    font-size: 250%;
+    font-family: "Source Sans Pro";
+    text-transform: uppercase;
+    line-height: 1.2;
+    color: #a3f7bf;
+    align-self: center;
+    justify-self: center;
+}
+
+.input-data-session{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.input-name-session{
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+}
+
+.input-name-session div{
+    display: grid;
+    
+}
+
+.first-name-input{
+    justify-self: start;
+}
+
+.last-name-input{
+    justify-self: end;
+}
+
+.name-input{
+    text-align: center;
+    border-radius: 5px;
+    font-size: 120%;
+    font-family: "Source Sans Pro";
+    outline: none;
+    padding: 10px 5%;
+    color: #a3f7bf;
+    background-color: #222831;
+    border: none;
+    height: 30%;
+    width: 80%;
+    align-self: center;
+}
+
+.input-email-session{
+    display: grid;
+}
+
+.input-email-session div{
+    display: grid;
+}
+
+.email-input{
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    width: 80%;
+    padding: 10px 10%;
+}
+
+.input-password-session{
+    display: grid;
+}
+
+.password{
+    justify-self: center;
+    padding: 10px 10%;
+}
+
+.submit-session{
+    display: grid;
+}
+
+.submit-session button{
+    font-weight: 600;
+    outline: none;
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+    height: 60%;
+    border: none;
+    background: #a3f7bf;
+    border-radius: 5px;
+    color: #393e46;
+    font-family: "Source Sans Pro";
+    font-size: 120%;
+}
+
+.submit-session button:hover{
+    color: white;
+    animation: lightloop2 3s;
+    animation-iteration-count: infinite;
+ }
+
+.submit-session button:focus{
+    color: white;
+    animation: lightloop2 3s;
+    animation-iteration-count: infinite;
+ }
+
+.signin-session{
+    display: grid;
+ }
+
+.signin-session div{
+    align-self: end;
+    justify-self: center;
+}
+
+.signin-session div span{
+    color: white;
+    font-family: "Source Sans Pro";
+    font-weight: lighter;
+    font-size: 90%;
+}
+
+.signin{
+    color: #a3f7bf;
+    outline: none;
+    font-family: "Source Sans Pro";
+    font-weight: lighter;
+    font-size: 90%;
+    transition-property: font-size;
+    transition-duration: 0.3s;
+}
+
+.signin:hover{
+    transition-duration: 0.3s;
+    font-size: 150%;
+}
+
+.signin:focus{
+    transition-duration: 0.3s;
+    font-size: 150%;
+}
+
+
+@keyframes lightloop2 {
+    0% {
+        background: #a3f7bf;
+        box-shadow: none;
+        transform: translateY(0px);
+    }
+    25% {
+        background: #2EE59D;
+        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        transform: translateY(-4px);
+    }
+    50% {
+        background: #a3f7bf;
+        box-shadow: none;
+        transform: translateY(0px);
+    }
+    75% {
+        background: #2EE59D;
+        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        transform: translateY(-4px);
+    }
+    100% {
+        background: #a3f7bf;
+        box-shadow: none;
+        transform: translateY(0px);
+    }
+}

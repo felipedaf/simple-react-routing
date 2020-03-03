@@ -3,6 +3,8 @@ import axios from 'axios'
 import "../../static/login-form.css"
 import { apiURI } from '../../uriRedirect'
 import { localTokenName } from '../../auth'
+import { Redirect, Link } from 'react-router-dom'
+import { useLastLocation } from 'react-router-last-location'
 
 
 export default function LoginForm(props) {
@@ -55,7 +57,7 @@ export default function LoginForm(props) {
             
     }
 
-    return (
+    const regularSession = () => (
         <div className="login-div">
             <form onSubmit={loginRequest}>
                 <span className="login-title">welcome</span>
@@ -97,9 +99,13 @@ export default function LoginForm(props) {
                 </div>
                 <button onClick={loginRequest}>LOGIN</button>
                 <div className="signup-message-div">
-                    <span>Not a member? <a href="register">Sign up now</a></span>
+                    <span>Not a member? <Link className='register' to='/register'>Sign up now</Link></span>
                 </div>
             </form>
         </div>
+    )
+
+    return (
+        regularSession()
     )
 }
