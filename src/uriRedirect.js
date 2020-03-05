@@ -22,13 +22,14 @@ const UriRedirect = ({component: Component, ...rest}) => {
         return <LoginPage/>
     }
 
-    console.log(rest.path)
-
     return (
 
         <Route {...rest} render={props => {
 
-            return auth ? <Component {...props} /> : (rest.path === '/register' ? <RegisterPage {...props}/> : <LoginPage {...props}/>)
+            return auth ?
+             <Component {...props} /> :
+                (rest.path === '/register' ? 
+                    <RegisterPage {...props}/> : <LoginPage {...props}/>)
         }
             
         }/>

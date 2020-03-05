@@ -1,10 +1,9 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch, HashRouter} from 'react-router-dom'
+import {  Route, Switch, HashRouter} from 'react-router-dom'
 import About from './components/About'
 import Contact from './components/Contact'
 import Home from './components/Home'
 import {PrivateRoute, UriRedirect} from './uriRedirect'
-import { LastLocationProvider } from 'react-router-last-location'
 
 
 

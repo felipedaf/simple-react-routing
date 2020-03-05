@@ -47,7 +47,7 @@ export default function PostVisualizer() {
                                 </div>
                             </div>
                             <div className="comment-content">
-                                <div className="content"><span>Que post merda mano exclui isso</span></div>
+                                <div className="content"><span>Teste 1 Teste 1 Teste 1 Teste 1Teste 1</span></div>
                             </div>
                         </div>
                     </div>

@@ -14,9 +14,9 @@
     width: 40vh;
     padding: 0.5vh 4vh;
     max-height: 600px;
-    min-height: 300px;
+    min-height: 470px;
     max-width: 400px;
-    min-width: 300px;
+    min-width: 302px;
     border-radius: 5px;
     grid-template-rows: 4fr 8fr 3fr 2fr;
 }

@@ -1,5 +1,4 @@
 import React from 'react'
-import PostSession from './home/PostSession'
 import '../static/home-grid.css'
 import PostMaker from './home/PostMaker'
 import PostVisualizer from './home/PostVisualizer'
