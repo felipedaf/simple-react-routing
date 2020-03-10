@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import "../../static/register-form.css"
 import { Link } from 'react-router-dom'
-// import axios from 'axios'
+import axios from 'axios'
+import { apiURI } from '../../uriRedirect'
 
 export default function RegisterForm() {
 
@@ -9,11 +10,25 @@ export default function RegisterForm() {
         e.preventDefault()
     }
 
-    // const postRegistration = e => {
+    const requestSender = e => {
+        let user = document.getElementById('username').value;
+        let fullName = document.getElementById('first-name').value +
+        ' ' + document.getElementById('last-name').value;
+        let mail = document.getElementById('email').value;
+        let pass = document.getElementById('password').value;
 
-    // }
+        axios.post(apiURI + '/user', {
+            username : user,
+            name : fullName,
+            email : mail,
+            password : pass,
+        })
+        .then(response => {
+            console.log(response)
+        })
+    }
 
-    const validData =(e) => {
+    const validData = e => {
         refreshHandler(e)
         let user = document.getElementById('username').value
         let fName = document.getElementById('first-name').value
@@ -79,10 +94,19 @@ export default function RegisterForm() {
         return validUsername(user) && validName(fName) && validName(lName) && validEmail(email) && validPass(password, confirm)
     }
 
+    const register = e => {
+        if(validData(e)){
+            console.log('opa')
+
+            requestSender(e)
+        }
+        refreshHandler(e)
+    }
+
     
 
     return <div className="register-div">
-                <form onSubmit={validData} autoComplete='off' className="input-register-form">
+                <form onSubmit={register} autoComplete='off' className="input-register-form">
                     <div className="form-title-session">
                         <span>Create Account</span>
                     </div>
