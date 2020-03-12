@@ -23,8 +23,16 @@ export default function RegisterForm() {
             email : mail,
             password : pass,
         })
-        .then(response => {
-            console.log(response)
+        .then(resp => {
+            if(resp.status === 201){
+                alert('User successfuly created!')
+                window.location.href = '/'
+            }
+            else
+                alert('Something went wrong!')
+        })
+        .catch(e => {
+            alert(e.response.data.message)
         })
     }
 
@@ -96,8 +104,6 @@ export default function RegisterForm() {
 
     const register = e => {
         if(validData(e)){
-            console.log('opa')
-
             requestSender(e)
         }
         refreshHandler(e)
