@@ -32,7 +32,11 @@ export default function RegisterForm() {
                 alert('Something went wrong!')
         })
         .catch(e => {
-            alert(e.response.data.message)
+            if(!e.response){
+                alert('Server currently unavailable!')
+            }
+            else
+                alert(e.response.data.message)
         })
     }
 

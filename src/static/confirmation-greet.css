@@ -1,0 +1,26 @@
+.main-div{
+    background-image: linear-gradient(190deg, #a3f7bf, #29a19c);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.greet-div{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    
+}
+
+
+.greet-div div{
+    height: 100%;
+    width: 100%;
+    background-color: #222831;
+    border-radius: 15px;
+    opacity: 90%;
+
+}

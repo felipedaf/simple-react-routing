@@ -60,8 +60,6 @@ const PrivateRoute = ({component: Component, ...rest}) => {
 
         <Route {...rest} render={props => {
 
-            console.log(props.location)
-
             return auth ? (
                 <Component {...props}/>
             ) : (
