@@ -140,7 +140,7 @@
 .register:focus{
     color: #2EE59D;
     transform: translateY(-4px);
-    font-size: 150%;
+    font-size: 120%;
     transition-duration: 0.3s;
 }
 
@@ -148,7 +148,7 @@
 .register:hover{
     color: #2EE59D;
     transform: translateY(-4px);
-    font-size: 150%;
+    font-size: 120%;
     transition-duration: 0.3s;
 }
 

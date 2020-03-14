@@ -3,8 +3,7 @@ import axios from 'axios'
 import "../../static/login-form.css"
 import { apiURI } from '../../uriRedirect'
 import { localTokenName } from '../../auth'
-import { Redirect, Link } from 'react-router-dom'
-import { useLastLocation } from 'react-router-last-location'
+import { Link } from 'react-router-dom'
 
 
 export default function LoginForm(props) {
@@ -12,8 +11,30 @@ export default function LoginForm(props) {
     const [usernameIconClass, setUsernameIconClass] = useState('login-svg-icons')
     const [passwordIconClass, setPasswordIconClass] = useState('login-svg-icons')
 
-    const loginRequest = event => {
+    const userAuthenticate = event => {
+        event.preventDefault()
         let username = document.getElementById('username').value
+
+        axios.get(apiURI + '/user/' + username)
+        .then(resp => {
+            if(resp.status === 200){
+                if(resp.data.data.confirmed){
+                    tokenRequest(event, username)
+                }
+                else{
+                    alert('User didnt confirm account!')
+                }
+            }
+        })
+        .catch(err => {
+            if(err.response.status === 404)
+                alert("There's no user using this username!")
+        })
+
+    }    
+    
+    const tokenRequest = (event, username) => {
+
         let password = document.getElementById('password').value
         axios({
             method: 'post',
@@ -40,8 +61,10 @@ export default function LoginForm(props) {
 
             
             let status = err.response.status
+            console.log(err.response)
+
             if(status === 401)
-                alert('User and password incompatible')
+                alert('User and password are incompatible')
             
         })
         event.preventDefault()
@@ -59,7 +82,7 @@ export default function LoginForm(props) {
 
     const regularSession = () => (
         <div className="login-div">
-            <form onSubmit={loginRequest}>
+            <form onSubmit={userAuthenticate}>
                 <span className="login-title">welcome</span>
                 <div className="data-field">
                     <div>
@@ -97,7 +120,7 @@ export default function LoginForm(props) {
                     </div>
                     
                 </div>
-                <button onClick={loginRequest}>LOGIN</button>
+                <button>LOGIN</button>
                 <div className="signup-message-div">
                     <span>Not a member? <Link className='register' to='/register'>Sign up now</Link></span>
                 </div>
