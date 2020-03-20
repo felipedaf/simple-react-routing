@@ -21,7 +21,7 @@ const Routes = () => (
             <PrivateRoute path='/contact' component={() => <Contact/>}/>
             <PrivateRoute path='/home' component={() => <Home/>}/>
             <Route path='/confirm/:token' component={() => <ConfirmationRedirect/>}/>
-            <Route path='*' component={() => <p>opa</p>}/>
+            <Route path='*' component={() => <p>404</p>}/>
         </Switch>
     </HashRouter>
 

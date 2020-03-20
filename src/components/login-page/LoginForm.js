@@ -18,6 +18,7 @@ export default function LoginForm(props) {
         axios.get(apiURI + '/user/' + username)
         .then(resp => {
             if(resp.status === 200){
+                console.log(resp.data)
                 if(resp.data.data.confirmed){
                     tokenRequest(event, username)
                 }

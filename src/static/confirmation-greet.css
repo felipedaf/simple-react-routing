@@ -24,3 +24,27 @@
     opacity: 90%;
 
 }
+
+.personal-welcome{
+    padding: 5%;
+    color: #a3f7bf;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro';
+    font-size: 250%;
+    font-weight: bolder;
+    text-align: center;
+
+}
+
+.greeting-phrase{
+    padding: 5%;
+    color: white;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro';
+    font-size: 300%;
+    font-weight: bolder;
+    text-align: center;
+    
+}

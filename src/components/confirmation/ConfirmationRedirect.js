@@ -6,8 +6,9 @@ import ConfirmationGreet from './ConfirmationGreet';
 
 export default function ConfirmationRedirect() {
     const [validToken, setValidToken] = useState(true)
+    const [customerName, setCustomerName] = useState('')
 
-    let { token } = useParams();
+    let { token} = useParams();
 
     useEffect(() => {
         checkToken()
@@ -18,18 +19,20 @@ export default function ConfirmationRedirect() {
         await axios.get(apiURI + '/confirm/' + token)
         .then(resp => {
             if(resp.status === 200){
+                let userConfirmedName = resp.data.user.name
+                setCustomerName(userConfirmedName)
                 setValidToken(true)
             }
             else
                 setValidToken(false)
         })
         .catch(e => {
-            setValidToken(true)
+            setValidToken(false)
         })
     }
 
 
     return (
-        validToken ? <ConfirmationGreet customerName={'Felipe'} /> : <Redirect to={{pathname : '/confirm'}}/>
+        validToken ? <ConfirmationGreet customerName={customerName} /> : <Redirect to={{pathname : '/confirm'}}/>
     )
 }

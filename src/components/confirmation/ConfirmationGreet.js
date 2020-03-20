@@ -7,7 +7,8 @@ export default function ConfirmationGreet(props) {
         <div className='main-div'>
             <div className='greet-div'>
                 <div>
-
+                    <p className='personal-welcome'>{props.customerName}, welcome back!</p>
+                    <p className='greeting-phrase'>you confirmed your account successfuly!</p>
                 </div>
             </div>    
         </div>

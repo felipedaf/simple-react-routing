@@ -194,3 +194,13 @@
         transform: translateY(0px);
     }
 }
+
+.loading-div{
+    display: grid;
+}
+
+.loading{
+    height: 80px;
+    align-self: end;
+    justify-self: center;
+}

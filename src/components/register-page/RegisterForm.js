@@ -6,11 +6,17 @@ import { apiURI } from '../../uriRedirect'
 
 export default function RegisterForm() {
 
+    const registerButton = <div className='submit-session'><button>REGISTER</button></div>
+
+    const loadingCheck = <div className='loading-div'><img className='loading' src={require('../../icons/loading.svg')}></img></div>
+
+    const [checkingRegister, setCheckingRegister] = useState(false)
+
     const refreshHandler = e => {
         e.preventDefault()
     }
 
-    const requestSender = e => {
+    const requestSender = (e, cb) => {
         let user = document.getElementById('username').value;
         let fullName = document.getElementById('first-name').value +
         ' ' + document.getElementById('last-name').value;
@@ -30,6 +36,8 @@ export default function RegisterForm() {
             }
             else
                 alert('Something went wrong!')
+
+            
         })
         .catch(e => {
             if(!e.response){
@@ -38,6 +46,10 @@ export default function RegisterForm() {
             else
                 alert(e.response.data.message)
         })
+        .finally(() => {
+            cb(false)
+        })
+        
     }
 
     const validData = e => {
@@ -107,8 +119,9 @@ export default function RegisterForm() {
     }
 
     const register = e => {
+        setCheckingRegister(true)
         if(validData(e)){
-            requestSender(e)
+            requestSender(e, setCheckingRegister)
         }
         refreshHandler(e)
     }
@@ -134,7 +147,7 @@ export default function RegisterForm() {
                         <div className='input-password-session'><input id='password' placeholder='Password' className='name-input password' type='password'></input></div>
                         <div className='input-password-session'><input id='confirm' placeholder='Confirm Password' className='name-input password' type='password'></input></div>
                     </div>
-                    <div className='submit-session'><button>REGISTER</button></div>
+                    {checkingRegister ? loadingCheck : registerButton}
                     <div className='signin-session'><div><span>Do you already have account? </span><Link className='signin' to='/'>Sign in</Link></div></div>
                 </form>
             </div>
