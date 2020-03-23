@@ -1,0 +1,46 @@
+.background{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    background-image: linear-gradient(190deg, #a3f7bf, #29a19c);
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+}
+
+.building-session{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+
+}
+
+.greet-session{
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    font-family: 'Source Sans Pro' ;
+    font-weight: lighter;
+    font-size: 250%;
+    color: #757575;
+}
+
+.animation-session{
+    align-self: center;
+    justify-self: center;
+}
+
+.bye-session{
+    justify-self: center;
+    align-self: center;
+    color: #565656;
+    text-align: center;
+    font-family: 'Source Sans Pro' ;
+    font-weight: lighter;
+    font-size: 400%;
+}
