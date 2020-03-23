@@ -5,7 +5,7 @@ import Home from './components/Home'
 import LoginPage from './components/LoginPage'
 import RegisterPage from './components/RegisterPage'
 
-const apiURI = 'http://localhost:8080'
+const apiURI = 'https://meu-simple-flask-api.herokuapp.com/'
 
 const UriRedirect = ({component: Component, ...rest}) => {
     const [auth, setAuth] = useState(null)
