@@ -16,7 +16,7 @@ const Routes = () => (
     <HashRouter>
         <Switch>
             <UriRedirect path='/' exact component={() => <Building/>} />
-            <UriRedirect path='/register' component={() => <Home/>} />
+            <UriRedirect path='/register' component={() => <Building/>} />
             <PrivateRoute path='/app' component={() => <h1>Voce esta logado!</h1>}/>
             <PrivateRoute path='/about' component={() => <About/>}/>
             <PrivateRoute path='/contact' component={() => <Contact/>}/>
