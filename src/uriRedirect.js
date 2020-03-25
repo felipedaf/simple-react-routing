@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { Route, Redirect} from 'react-router-dom'
 import {isAuthenticated} from './auth'
-import Home from './components/Home'
 import LoginPage from './components/LoginPage'
 import RegisterPage from './components/RegisterPage'
 
@@ -21,6 +20,7 @@ const UriRedirect = ({component: Component, ...rest}) => {
     if (auth === null){
         return <LoginPage/>
     }
+
 
     return (
 

@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import "../../static/register-form.css"
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import axios from 'axios'
 import { apiURI } from '../../uriRedirect'
 
 export default function RegisterForm() {
+
+    const [redirect, setRedirect] = useState(false)
 
     const registerButton = <div className='submit-session'><button>REGISTER</button></div>
 
@@ -14,6 +16,12 @@ export default function RegisterForm() {
 
     const refreshHandler = e => {
         e.preventDefault()
+    }
+
+    const redirectToLogin = () => {
+        if(redirect){
+            return <Redirect to='/'/>
+        }
     }
 
     const requestSender = (e, cb) => {
@@ -32,7 +40,7 @@ export default function RegisterForm() {
         .then(resp => {
             if(resp.status === 201){
                 alert('User successfuly created!')
-                window.location.href = '/'
+                setRedirect(true)
             }
             else
                 alert('Something went wrong!')
@@ -129,6 +137,7 @@ export default function RegisterForm() {
     
 
     return <div className="register-div">
+                {redirectToLogin()}
                 <form onSubmit={register} autoComplete='off' className="input-register-form">
                     <div className="form-title-session">
                         <span>Create Account</span>
